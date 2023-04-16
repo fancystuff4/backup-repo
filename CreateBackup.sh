@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /home/ubuntu/
+
 #Create mysql backup file
 timestamp=$(date +"%Y%m%d%H%M%S")
 
