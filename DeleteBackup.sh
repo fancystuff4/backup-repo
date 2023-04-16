@@ -1,14 +1,14 @@
 #!/bin/bash
 cd /home/ubuntu/backups
-# Delete files older than  1 min +720
-find . -name "*.sql" -type f -mmin +0.5 -exec rm {} \;
+# Delete files older than  1 min +720 +0.5
+find . -name "*.sql" -type f -mmin +720 -exec rm {} \;
 
 
 
 BUCKET_NAME="db-backup-files-mysql"
 
 # Set the time threshold in seconds
-TIME_THRESHOLD=$((1 * 30))  # 1 min in seconds 12 * 3600
+TIME_THRESHOLD=$((12 * 3600))  # 1 min in seconds 1 * 30
 
 # Get a list of files in the S3 folder
 file_list=$(aws s3 ls s3://$BUCKET_NAME --recursive | awk '{print $4}')
