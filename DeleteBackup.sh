@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ./backups
+cd /home/ubuntu/backups
 # Delete files older than  1 min +720
 find . -name "*.sql" -type f -mmin +0.5 -exec rm {} \;
 
