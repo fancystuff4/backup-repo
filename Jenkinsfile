@@ -17,7 +17,6 @@ pipeline {
         stage('Create backup ') {
             steps {
                 sshagent(['ubuntu']) {
-                sh ' $REHO sudo ls backup-repo'
                 sh ' $REHO sudo sh backup-repo/CreateBackup.sh'
              }
             }
