@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        REHO = "ssh -o StrictHostKeyChecking=no ubuntu@52.91.254.29"
+        REHO = "ssh -o StrictHostKeyChecking=no ubuntu@3.94.187.156"
     }
 
     stages {
